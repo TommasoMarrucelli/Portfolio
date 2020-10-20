@@ -1,0 +1,50 @@
+<svg  id="cv_open" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="150%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 27778 55556"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    
+                    <g transform="translate(2000,0)">
+                        <g >
+                        <path transform = "scale(95), translate(-20, 250)" fill="#000" d="M73.57-128.10L73.57-128.10Q101.56-128.10 117.85-114.10L117.85-114.10L117.85-114.10Q134.14-100.10 134.14-74.11L134.14-74.11L95.53-74.11L95.53-74.11Q95.53-85.09 89.76-91.50L89.76-91.50L89.76-91.50Q84.00-97.91 73.38-97.91L73.38-97.91L73.38-97.91Q61.12-97.91 55.36-90.22L55.36-90.22L55.36-90.22Q49.59-82.53 49.59-68.81L49.59-68.81L49.59-57.10L49.59-57.10Q49.59-43.55 55.36-35.78L55.36-35.78L55.36-35.78Q61.12-28.00 73.02-28.00L73.02-28.00L73.02-28.00Q84.73-28.00 90.77-34.04L90.77-34.04L90.77-34.04Q96.81-40.08 96.81-51.06L96.81-51.06L134.14-51.06L134.14-51.06Q134.14-25.25 118.31-11.53L118.31-11.53L118.31-11.53Q102.48 2.20 73.57 2.20L73.57 2.20L73.57 2.20Q41.36 2.20 24.80-14.27L24.80-14.27L24.80-14.27Q8.23-30.74 8.23-62.95L8.23-62.95L8.23-62.95Q8.23-95.16 24.80-111.63L24.80-111.63L24.80-111.63Q41.36-128.10 73.57-128.10L73.57-128.10"/>
+                                 
+                        </g>
+                        </g>
+                        <g transform="translate(2000,0)">
+                        <g >
+                        <path transform = "scale(95), translate(-15, 250)" fill="#000" d="M236.99 0L190.14 0L145.48-125.90L188.67-125.90L213.93-41.72L214.66-41.72L240.10-125.90L281.45-125.90L236.99 0"/>
+                                 
+                        </g>
+                        
+                        <g id="arrows">
+
+    <g transform="translate(-30000, 30000)">
+        <polygon transform="scale(60)" points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 		"/>
+	</g>
+
+    <g transform="translate(-15000, 30000)">
+        <polygon transform="scale(60)" points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 		"/>
+	</g>
+
+    <g transform="translate(0, 30000)" >
+        <polygon transform="scale(60)" points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 		"/>
+	</g>
+
+    <g transform="translate(15000, 30000)">
+        <polygon transform="scale(60)" points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 		"/>
+	</g>
+    <g transform="translate(30000, 30000)">
+        <polygon transform="scale(60)" points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 		"/>
+	</g>
+    <g transform="translate(45000, 30000)">
+        <polygon transform="scale(60)" points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 		"/>
+	</g>
+    <animateTransform attributeName="transform"
+            type="translate"
+            from="0"
+            to="15000"
+            begin="0s"
+            dur="1s"
+            repeatCount="indefinite"
+        />
+    </g>  
+ </g>
+</svg>

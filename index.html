@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TM - Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+    <!--Fontawsome icons-->
+    <script src="https://kit.fontawesome.com/04a737407d.js" crossorigin="anonymous"></script>
+
+    <!--Bootstrap 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--Aos library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+    
+    <!-- used to check if the page has been scrolled to start animation-->
+    <div id="scroll_check"></div>
+    <div id="landing_text_scroll"></div>
+    <input id="page_has_been_scrolled" autocomplete='off' value="">
+
+
+
+
+
+
+
+<!-- ----------------------  FRAME SECTION  ----------------------------- -->
+
+    <section class="page_frame"></section>
+    <section class="outer_links_box">
+        <div id="outer_name_box">
+            <img src="img/logo_W.png" alt="logo" id="outer_logo"><span>Tommaso Marrucelli</span>
+        </div>
+        <div id="outer_link_menu">
+            <div id="link_linkedin" class="fixed_link">
+                <a href="https://www.linkedin.com/in/tommaso-marrucelli-238342187/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            </div>
+            <div id="link_gmail" class="fixed_link">
+                <a href="mailto:t.marrucelli@gmail.com" target="_blank"><i class="fab fa-google"></i></a>
+            </div>
+            <div id="link_github" class="fixed_link">
+                <a href="https://github.com/TommasoMarrucelli" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+        <div id="outer_cv">
+                 <span id="outer_cv_span_open"></span>
+                 <span id="outer_cv_span_close"></span>
+                 <object id="left_menu_open" type="image/svg+xml" data="img/CV_open.svg"></object>
+                 <object id="left_menu_close" type="image/svg+xml" data="img/CV_close.svg"></object>
+        </div>
+
+        <div id="outer_scroll">
+            <div id="img_scroll_box">
+                 <object id="" type="image/svg+xml" data="img/scroll.svg"></object>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<!-- ----------------------  WELCOME SECTION  ----------------------------- -->
+
+    <main class="main_page">
+
+        <section class="hello_box"></section>
+          
+
+        <section id="greeting_box" class="landing_text">
+            <article id="greeting_title">Hi, I'm Tommy and I'm a software developer.</article>
+            <article class="greeting_content">If you are looking to enhance the online presence of your business or to make your next hire, don't hesitate to contact me  <a href="mailto:t.marrucelli@gmail.com">here</a></article>
+        </section>
+
+        <section id="hello_msg_box" class="landing_text">
+            <div class="hello_msg">
+                    <span id="wel">
+                        <svg width = 100% >
+                            <text x="0%" y="50%" dy=".35em" text-anchor="start">
+                                Wel
+                            </text>
+                        </svg>	
+                    </span>
+                    
+                    <span id="come">
+                        <svg width = 100%>
+                            <text x="0%" y="50%" dy=".35em" text-anchor="start">
+                                come
+                            </text>
+                        </svg>	                       
+                    </span>
+                    
+            </div>
+            <div id = "x_deco_box" class="hello_msg">
+                <span id="x_deco">
+                    <svg class="hello_x" width="50" height="50" viewBox="0 0 24 24" ><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+                    <svg class="hello_x" width="50" height="50" viewBox="0 0 24 24" style="margin-top: -15px;"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+                    <svg class="hello_x" width="50" height="50" viewBox="0 0 24 24" style="margin-top: -15px;"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" /></svg>
+                </span>
+            </div>
+        </section>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ----------------------  RECENT PROJECTS SECTION  ----------------------------- -->
+
+        <section class="content_box">
+            <div class="recent_project_header" data-aos="flip-up">Some of my recent Projects</div>
+
+            <section class="projects_cont">
+                <div class="project_box" data-aos="zoom-in-right">
+                    <article id="lorem_ipsum_box" class="project_logo_cont">
+                        <object type="image/svg+xml" data="img/logo_lorem_ipsum.svg"></object>
+                    </article>
+                    <article  class="project_description">
+                        <h1>Lorem Ipsum Library</h1>
+                        Lorem Ipsum Library (LIL) is a web application designed to allow users to browse books and see their details and reviews available querying the Google Book API. LIL's users are also able to add specific books to their "favourites" and to rate them.
+                        You can register or use the username "Tommy" and the password "Lorem" to test the app. 
+                        <a href="http://tommasomarrucelli.infinityfreeapp.com/" target="_blank">Check it</a>
+                    </article>
+                </div>
+                <div class="project_box" data-aos="fade-down-left">
+                    <article id="red_giraffe_box" class="project_logo_cont">
+                        <object type="image/svg+xml" data="img/logo_red_giraffe.svg"></object>
+                    </article>
+                    <article class="project_description">
+                        <h1>The Red Giraffe B&B</h1>
+                        Lorem Ipsum Library (LIL) is a web application designed to allow users to browse books and see their details and reviews available querying the Google Book API. LIL's users are also able to add specific books to their "favourites" and to rate them.
+                        The user interface has been implemented using HTML and Sass, while Javascript has been used. 
+                        <a href="http://redgiraffe.infinityfreeapp.com/" target="_blank">Check it</a>
+                    </article>
+                </div>
+            </section>        
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- ----------------------  UNIVERSITY PROJECTS SECTION  ----------------------------- -->
+
+        <section class="old_projects">
+            <div class="old_project_header" data-aos="flip-up">University Projects</div>
+
+            <div class="carousel_cont">
+                <div id="old_project_cont" class="carousel slide" data-interval="false">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#old_project_cont" data-slide-to="0" class="active"></li>
+                      <li data-target="#old_project_cont" data-slide-to="1"></li>
+                      <li data-target="#old_project_cont" data-slide-to="2"></li>
+                    </ul>
+                  
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="old_project_carusel">
+                            <div class="old_project_box">
+                                <div class="old_project_img">
+                                    <img src="img/SSE_laptop.jpg" alt="Semanti Search Engine">
+                                    <button class="zoom_btn"  data-target_img ="SSE_img">
+                                        <i class="fas fa-search-plus fa-2x"></i>
+                                    </button>
+                                </div>
+                                <div class="old_project_description">
+                                    <h1>Semantic Search Engine</h1>
+                                    <p>Search engines are fundamental tools to find information from the Web, but the enormous amount of data stored over the internet has increased the difficulty in retrieving relevant results. In most cases, keyword-based search engines rely on the matching between the terms entered by the user and the terms contained in an index. This approach may arise several problems because the user and the index may not use the same term but, for example, a synonym or a spelling variation. Query expansion is a common approach that deals with these issues by reformulating the user query, adding new terms in order to improve information retrieval performances. In this project, we developed a web search engine that uses Linked Data in order to expand the user queries and to return more relevant results. Full description on GitHub.
+                                    </p>
+                                    <div class="btn_box">
+                                        <a href="https://github.com/TommasoMarrucelli/Semantic-Search-Engine" target="_blank">Check the repository</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="old_project_carusel">
+                            <div class="old_project_box">
+                                <div class="old_project_img">
+                                    <img src="img/over_surgery_laptop.jpg" alt="Over Surgery Online Services">
+                                    <button class="zoom_btn"  data-target_img ="over_surgery_img">
+                                        <i class="fas fa-search-plus fa-2x"></i>
+                                    </button>
+                                </div>
+                                <div class="old_project_description">
+                                    <h1>Over Surgery Online Services</h1>
+                                    <p>The GP Surgery Online Services is a web application that can be used by a GP Surgery to provide its clients with online services. The user interface has been implemented HTML5, CSS and Bootstrap while the server-side has been developed using PHP. A relational database has been built using MySQL to store the application data. Both patients and employees can log in the application by providing their username and password. Patients can check GPs and nurses availability, book and cancel appointments, extend some prescriptions and check test results. Employees can manage patients booking and check the calendar of appointments.
+                                    </p>
+                                    <div class="btn_box">
+                                        <a href="https://github.com/TommasoMarrucelli/Over-Surgery-Online-Services" target="_blank">Check the repository</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="old_project_carusel">
+                            <div class="old_project_box">
+                                <div class="old_project_img">
+                                    <img src="img/marina_berth_laptop.jpg" alt="Marina Berth Booking System">
+                                    <button class="zoom_btn"  data-target_img ="marina_berth_img">
+                                        <i class="fas fa-search-plus fa-2x"></i>
+                                    </button>
+                                </div>
+                                <div class="old_project_description">
+                                    <h1>Marina Berth Booking System</h1>
+                                    <p>The Marina Berth Booking System is a self-contained console-based program that can be used by the Marina Berth employees to manage the record administration. This program uses a single linked list to store new records. It is designed to read and write information on a file. When the users try to record a new booking, the file is read and the list is loaded. If the file is empty a new list is created. All the required information entered by the users is stored in an object that became a new node of the linked list. Then the list is binary serialized and is written again in the file. 
+                                    </p>
+                                    <div class="btn_box">
+                                        <a href="https://github.com/TommasoMarrucelli/Marina-Berth-Booking-System" target="_blank">Check the repository</a>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#old_project_cont" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#old_project_cont" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                  
+                  </div>
+            </div>
+
+            
+            
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ----------------------  LEFT MENU  ----------------------------- -->
+
+    <aside id="left_menu">
+
+        <section id="cv_menu">
+            <h1>CV</h1>   
+            <div class="cv_cat dig_comp activated" style="display: block;" data-cat-type="dig_comp"><div class="cv_cat_sub"><span class="colored_span"></span>Digital</div><div class="cv_cat_sub"><span class="colored_span"></span>Competence</div></div>
+            <div class="cv_cat edu" data-cat-type="edu"><span class="colored_span"></span>Education</div>
+            <div class="cv_cat work" style="display: block;" data-cat-type="work"><div class="cv_cat_sub"><span class="colored_span"></span>Work</div><div class="cv_cat_sub"><span class="colored_span"></span>Experience</div></div>
+            <div id="cv_download_btn_box"><a id="cv_download_btn" href="files/Tommaso Marrucelli_CV.docx">DOWNLOAD CV</a></div>
+        </section>
+
+        <section id="cv_cat_box">
+            <article id="dig_comp_box" class="cat_article dig_comp activated">
+                <div>
+                            <table>
+                                <tr>
+                                    <td class="ico_cont"><i class="fab fa-html5"></i></td>
+                                    <td class="tech_name">HTML</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><i class="fab fa-css3-alt"></i></td>
+                                    <td class="tech_name">CSS</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><i class="fab fa-sass"></i></td>
+                                    <td class="tech_name">Sass</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><i class="fab fa-bootstrap"></i></td>
+                                    <td class="tech_name">Bootstrap</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><i class="fab fa-wordpress-simple"></i></td>
+                                    <td class="tech_name">WordPress</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><i class="fab fa-js"></i></td>
+                                    <td class="tech_name">Javascript</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><object data="img/jQuery_logo.svg" type="image/svg+xml"></object></td>
+                                    <td class="tech_name">jQuery</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td class="ico_cont"><object data="img/Ajax_logo.svg" type="image/svg+xml"></object></td>
+                                    <td class="tech_name">AJAX</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><object data="img/MySQL.svg" type="image/svg+xml"></object></td>
+                                    <td class="tech_name">MySQL</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><object data="img/Sparql_logo.svg" type="image/svg+xml"></object></td>
+                                    <td class="tech_name">SPARQL</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><i class="fab fa-php"></i></td>
+                                    <td class="tech_name">PHP</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><object data="img/csharp_logo.svg" type="image/svg+xml"></object></td>
+                                    <td class="tech_name">C#</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><object data="img/solr_logo.svg" type="image/svg+xml"></object></td>
+                                    <td class="tech_name">Apache Solr</td>
+                                </tr>
+                                <tr>
+                                    <td class="ico_cont"><i class="fab fa-wordpress-simple"></i></td>
+                                    <td class="tech_name">Apache Nutch</td>
+                                </tr>
+                            </table>
+                        </div>
+                    
+            </article>
+    
+            <article id="edu_box" class="cat_article edu">
+                <div class="scrollable_cont">
+                    <section class="edu_section">
+                        <h1>2018 - 2019</h1>
+                        <p class="edu_title">MSc Information and Communication Technology, ARU, Cambridge, U.K.</p>
+                        <p><b>Score:</b> Distinction.</p>
+                        <p><b>Subjects studied:</b> Computer Systems and Servers, Developing Web Applications, Research Methods, Secure Systems, Software Implementation.</p>
+                    </section>
+                    <section class="edu_section">
+                        <h1>2011-2016</h1>
+                        <p class="edu_title">BA Political Science, University of Florence, Florence, Italy</p>
+                        <p><b>Subjects studied:</b> Statistics, History of Medieval and Modern Law, History of Political Ideas, Contemporary History, Principles of Economics, Sociology, Public Law Institutions, Political Science, Business Data Management, Media and Communication Law, Media and Society, Political Communication, Comparative Politics, Sociology of Cultural Processes, English Language, History of Journalism, Communication and Public Culture, History of Political Thought, New Media Theories and Techniques, Spanish Language, Demography.</p>
+                    </section>
+                    <section class="edu_section">
+                        <h1>2005-2010</h1>
+                        <p class="edu_title">High School specializing in classical studies, Liceo Ginnasio Galileo, Florence, Italy</p>
+                        <p><b>Subjects studied:</b>Latin, Ancient Greek, Italian grammar and literature, English grammar and literature, History, Geography, Mathematics, Physics, Chemistry, Biology.</p>
+                    </section>
+                </div>
+            </article>
+            
+            <article id="work_box" class="cat_article work">
+                <div class="scrollable_cont">
+                    <section class="work_section">
+                        <h1>08/2019 – 08/2020</h1>
+                        <p class="work_title">Taylor Bennett Partners LLP, Baldock, U.K.</p>
+                        <p>Junior Developer, HTML email design and development, Web Applications design and development with HTML, CSS, PHP, JavaScript, JQuery, Ajax and MySQL, while using GitHub for version control. Proprietary Software management.</p>
+                    </section>
+                    <section class="work_section">
+                        <h1>06/2019 – 08/2019</h1>
+                        <p class="work_title">US Speaking Ltd, Wyboston Lake, U.K.</p>
+                        <p>Localisation Tester, QA Tester.</p>
+                    </section>
+                    <section class="work_section">
+                        <h1>06/2018 – 09/2018</h1>
+                        <p class="work_title">Avis Rent a Car System, LLC, Florence, Italy.</p>
+                        <p>Customer Care, Payments Management, Facility Management.</p>
+                    </section>
+                    <section class="work_section">
+                        <h1>06/2017 – 11/2017</h1>
+                        <p class="work_title">Vauxhall Aftersales Warehouse, Luton, U.K.</p>
+                        <p>Customer Advisor, First line support Agent, Customer Care.</p>
+                    </section>
+                    <section class="work_section">
+                        <h1>06/2016 – 09/2016</h1>
+                        <p class="work_title">Internship at Commont Service S.R.L, Florence, Italy</p>
+                        <p>Marketing, Press Office, Customer Care, Website Management.</p>
+                    </section>
+                </div> 
+            </article>    
+        </section>
+        
+        <div id="color_block" >
+        </div>
+    </aside>
+    
+
+    <div class="big_images" id="SSE_img">
+        <img src="img/SSE_laptop.jpg" alt="Semantic Search Engine">
+        <i class="fas fa-times-circle fa-5x close_zoom_btn" data-target_img ="SSE_img"></i>
+    </div>
+
+    <div class="big_images" id="over_surgery_img">
+        <img src="img/over_surgery_laptop.jpg" alt="Over Surgery Online Services">
+        <i class="fas fa-times-circle fa-5x close_zoom_btn" data-target_img ="over_surgery_img"></i>
+    </div>
+
+    <div class="big_images" id="marina_berth_img">
+        <img src="img/marina_berth_laptop.jpg" alt="Marina Berth Booking System">
+        <i class="fas fa-times-circle fa-5x close_zoom_btn" data-target_img ="marina_berth_img"></i>
+    </div>
+
+    <script src="portfolio.js"></script>
+    <script>
+        check_if_page_scrolled();
+    </script>
+    
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+
+
