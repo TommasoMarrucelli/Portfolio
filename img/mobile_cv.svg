@@ -1,0 +1,117 @@
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0,0,100,100" width="200" height="200"  id="cv_svg">
+    
+    <g transform= "scale(1)">
+        <circle id="circ" cx="100" cy="100" r="95" stroke="black" stroke-width="8" fill="transparent"/>
+        
+        <g transform="translate(5, 15) scale(0.9)">
+            <g transform="translate(30 , 45)">
+                <path id="c" d="M60 10 L25 10 L10,25 L10 75 L25 90 L60 90" stroke="black" stroke-width="8" fill="transparent"/>  
+            </g>
+            
+            <g transform="translate(0 , -5)">
+                <path id="v" d="M105 60 L140 136 L175 60" stroke="black" stroke-width="8" fill="transparent"/> 
+            </g>
+        </g>
+
+        <circle id="circ_forward" cx="100" cy="100" r="95" fill-opacity="0.01"/>
+        <circle id="circ_back" cx="100" cy="100" r="0" fill-opacity="0.01"/>
+    </g>
+
+    <animate 
+    xlink:href="#circ_back"
+    attributeName="r"
+    from="95"
+    to="0" 
+    dur="0.001s"
+    fill="freeze"
+    begin="click"
+    id="anim_back" />
+    <animate 
+    xlink:href="#circ_back"
+    attributeName="r"
+    from="0"
+    to="95" 
+    dur="0.001s"
+    fill="freeze"
+    begin="anim_start.end"
+     />
+
+    <animate 
+    xlink:href="#circ_forward"
+    attributeName="r"
+    from="95"
+    to="0" 
+    dur="0.001s"
+    fill="freeze"
+    begin="click"
+    id="anim_start" />
+    <animate 
+    xlink:href="#circ_forward"
+    attributeName="r"
+    from="0"
+    to="95" 
+    dur="0.001s"
+    fill="freeze"
+    begin="anim_back.end"
+     />
+
+     <animate 
+    xlink:href="#c"
+    attributeName="d"
+    from="M60 10 L25 10 L10,25 L10 75 L25 90 L60 90"
+    to="M15 0 L75 50 L75 50  L75 50 L135 100 L135 100" 
+    dur="0.5s"
+    calcMode="linear"
+    fill="freeze"
+    begin="anim_start.begin"
+    id="c_move_forward" />
+    <animate 
+    xlink:href="#c"
+    attributeName="d"
+    from="M15 0 L75 50 L75 50  L75 50 L135 100 L135 100"
+    to="M60 10 L25 10 L10,25 L10 75 L25 90 L60 90" 
+    dur="0.5s"
+    calcMode="linear"
+    fill="freeze"
+    begin="anim_back.begin"
+    id="c_move_back" />
+
+    <animate 
+    xlink:href="#v"
+    attributeName="d"
+    from="M105 60 L140 136 L175 60"
+    to="M45 150 L105 100 L165 50" 
+    dur="0.5s"
+    calcMode="linear"
+    fill="freeze"
+    begin="anim_start.begin"
+    id="v_move_forward" />
+    <animate 
+    xlink:href="#v"
+    attributeName="d"
+    from="M45 150 L105 100 L165 50"
+    to="M105 60 L140 136 L175 60" 
+    dur="0.5s"
+    calcMode="linear"
+    fill="freeze"
+    begin="anim_back.begin"
+    id="v_move_back" />
+
+
+
+    <animate 
+        xlink:href="#circ"
+        attributeName="r"
+        from="95"
+        to="95" 
+        dur="2.5s"
+        calcMode="linear"
+        repeatCount="indefinite"
+        values="95; 85; 95"
+        keyTimes="0; 0.5; 1"
+        fill="freeze" 
+        id="circ_pulse" />
+
+
+</svg>

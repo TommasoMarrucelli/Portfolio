@@ -4,11 +4,33 @@
 
 html{
     font-size: 16px;
+    
 }
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    scrollbar-color: #000000 #ffffff;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    &::-webkit-scrollbar:vertical {
+        width: 11px;
+    }
+    
+    &::-webkit-scrollbar:horizontal {
+        height: 11px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        border: 2px solid white; 
+        background-color: rgba(0, 0, 0, 1);
+    }
 }
 .hidden{
     display: none!important;
@@ -21,6 +43,33 @@ a{
     text-decoration: none!important;
 }
 
+body{
+
+    
+    scrollbar-width: auto!important;
+
+    &::-webkit-scrollbar:vertical {
+        width: 14px!important;
+    }
+    &::-webkit-scrollbar:horizontal {
+        height: 14px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+    }
+}
+.mobile-version{
+    display: none;
+}
+.desktop-version{
+    display: initial;
+}
+#page_has_been_scrolled{
+    visibility: hidden;
+    pointer-events: none;
+    height: 0;
+    border: 0;
+}
 
 .page_frame {
     position: fixed;
@@ -69,6 +118,7 @@ a{
         align-items: center;
         font-family: 'Bebas Neue', cursive;
         font-size: 1.25rem;
+        
 
         img{
             max-width: 2.5rem;
@@ -185,10 +235,11 @@ a{
 
 .main_page {
     background-color: $backgroundColor;
-    min-height: 300vh;
+    height: max-content;
     position: relative;
     z-index: 500;
     max-width: 97%;
+
 }
 
 #scroll_check {
@@ -271,6 +322,7 @@ a{
 
 #hello_msg_box {
     width: 100%;
+    min-height: 720px;
     position: fixed;
     top:0;
     bottom: 0;
@@ -348,14 +400,16 @@ a{
 }
 
 .hello_x {
-    fill: $tertiaryColor;
+    fill: none;
+    animation: welcome_x 5s forwards;
+    animation-iteration-count: 1;
 }
 
 .content_box {
-    margin-top: 75vh;
+    margin-top: 95vh;
     position: relative;
     height: 110vh;
-    min-height: 690px;
+    min-height: 795px;
     background-color: $backgroundColor;
     z-index: 600;
     display: block;
@@ -405,6 +459,7 @@ a{
         padding-left: 12vh;
         opacity: 0;
         pointer-events: none;
+        overflow-y: auto;
 
         font-family: 'Khula', sans-serif;
         line-height: 1;
@@ -506,9 +561,11 @@ a{
 
         height: inherit;
         max-height: 100%;
+        width: 80%;
         padding-top: 4rem;
         padding-bottom: 2rem;
-        pointer-events: none;
+        overflow-y: auto;
+        
 
         div{
             width: 50%;
@@ -547,19 +604,26 @@ a{
         justify-content: center;
         height: 100%;
         max-height: 550px;
+        padding-top: 6rem;
 
         .scrollable_cont{
-            position: relative;
+
+            max-height: 100%;
+
             height: 550px;
-            width: 100%; 
+            width: 80%; 
             overflow-y: scroll;
             overflow-x: hidden;
-            padding-top: 4rem;
+            
+
+            
+            
         }
 
         .edu_section, .work_section{
-            width: 80%;
-            height: max-content;
+            width: 100%;
+            padding-right: 2rem;
+            height: auto;
             font-size: 1.2rem;
             font-family: "Kumbh Sans", sans-serif;
             text-align: left;
@@ -588,6 +652,7 @@ a{
         .work_section{
             padding-bottom: 1.5rem; 
         }
+        
     }
     &.open{
         margin-left: -6vh;
@@ -606,7 +671,7 @@ a{
             display: flex;
             animation: 2s text_appears ease-out forwards;
             animation-iteration-count: 1;
-            pointer-events: all;
+            pointer-events: all!important;
             *{
                 pointer-events: all;
             }
@@ -634,7 +699,9 @@ a{
     &.open.closed{
         animation: 0.75s cv_disappear ease-out forwards;
         animation-iteration-count: 1;
-        pointer-events: none;
+        *{
+        pointer-events: none!important;
+        }
 
         #cv_menu{
             animation: 0.75s text_disappear ease-out forwards;
@@ -705,24 +772,30 @@ a{
     padding: 4vh 10vh;
     max-height: 100vh;
     position: relative;
+    
 }
-
+.ani_box{
+    @include center;
+    width: 45%;
+    height: 50%;
+}
 .project_box{
     @include center;
     flex-direction: column;
-    width: 40%;
+    width: 80%;
     height: 80%;
-    background-color: #ffffff;
+    background-color: $backgroundColor;
+    transform-style: preserve-3d;
 
-    -webkit-box-shadow: 9px 8px 16px 13px rgba(97,97,97,1);
--moz-box-shadow: 9px 8px 16px 13px rgba(97,97,97,1);
-box-shadow: 9px 8px 16px 13px rgba(97,97,97,1);
+    -webkit-box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 50px rgba(0,0,0, 0.2);
+    -moz-box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 50px rgba(0,0,0, 0.2);
+    box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 50px rgba(0,0,0, 0.2);
 
 }
 
 .project_logo_cont{
     position: relative;
-    border: 2rem solid #ffffff;
+    border: 2rem solid $backgroundColor;
     width: 90%;
     padding-top: 45%;
     position: relative;
@@ -742,6 +815,7 @@ box-shadow: 9px 8px 16px 13px rgba(97,97,97,1);
 
     
 }
+
 #lorem_ipsum_box{
     background-image: url('img/lorem_background.jpg');
     background-size: cover;
@@ -750,11 +824,12 @@ box-shadow: 9px 8px 16px 13px rgba(97,97,97,1);
 #red_giraffe_box{
     background-image: url('img/redgiraffe_background.jpg');
     background-size: cover;
+
 }
 
 .project_description{
     width: 90%;
-    background-color: #ffffff;
+    background-color: $backgroundColor;
     padding-bottom: 1rem;
     font-family: "Kumbh Sans", sans-serif;
     line-height: 1.5;
@@ -792,14 +867,16 @@ box-shadow: 9px 8px 16px 13px rgba(97,97,97,1);
 .old_projects{
     position: relative;
     height: 100vh;
-    background-color: $primaryColor;
+    min-height: 720px;
+    background-color: $backgroundColor;
     z-index: 600;
+
 }
 .carousel_cont{
     @include center;
 }
 #old_project_cont{
-    height: 50%;
+    height: 70%;
     width: 90%;
 }
 
@@ -808,14 +885,21 @@ box-shadow: 9px 8px 16px 13px rgba(97,97,97,1);
     height: 100%;
     padding: 3% 10%;
 }
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
 .old_project_box{
     width: 100%;
     min-height: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffffff;
+    background-color: $backgroundColor;
     font-size: 0.9rem;
+    -webkit-box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 30px rgba(0,0,0, 0.2);
+    -moz-box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 30px rgba(0,0,0, 0.2);
+    box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 30px rgba(0,0,0, 0.2);
 
     h1{
         text-align: center;
@@ -915,3 +999,678 @@ box-shadow: 9px 8px 16px 13px rgba(97,97,97,1);
     }
     
 }
+
+.carousel-indicators {
+     bottom: 0!important;
+    li{
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+
+    body{
+        background-color: white!important;
+        height: 100%important;
+
+    }
+   
+    
+    .mobile-version{
+        display: initial;
+    }
+    .desktop-version{
+        display: none;
+    }
+
+    
+
+    #logo_cont{
+        @include center;
+        position: fixed;
+        height: 2rem;
+        margin: 3%;
+        z-index: 1000;
+
+        span{
+            font-size: 1rem;
+            font-family: 'Bebas Neue', cursive;
+            margin-left: 0.5rem;
+            color: black;
+            
+        }
+
+        img{
+            width: 2rem;
+            max-width: 2rem;
+        }
+    }
+
+    #mob_header{
+        @include center;
+        
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 3.5rem;
+        background-color: $frameColor;
+        z-index: 990;
+        overflow: hidden;
+
+        .mob_link{
+            padding: 0 1rem;
+            i{
+                color: black; 
+            }
+
+            span{
+                font-size: 0.9rem;
+                font-family: 'Bebas Neue', cursive;
+                margin-left: -0.7rem;
+                color: white;
+            }
+        }
+
+        #mob_cv_btn_box{
+           position: absolute;
+           right: 0.5rem;
+           background-color: transparent;
+           pointer-events: all;
+        
+            button{
+               width: 2.5rem;
+               height: 2.5rem;
+               @include center;
+               flex-direction: column; 
+               border-radius: 50%;
+               border: none;
+               outline: none;
+               background-color: transparent;
+               pointer-events: all;
+
+               svg{       
+                max-width: 100%;
+                max-height: 100%;
+               }
+               
+
+               &:hover, &:focus, &:active{
+                   border: none;
+               }
+                
+            }
+        }
+    }   
+    
+    #mob_welcome{
+        height: 125vh;
+        background-color: $backgroundColor;
+        
+        
+        #mob_color_block{
+            background-color: $primaryColor;
+            width: 50%;
+            height: 125vh;
+            position: absolute;
+            transition: all 0.75s ease-in;
+
+            body.page_scrolled & {
+                width: 100%;
+            }
+        }
+        
+
+            .mob_hello_msg {
+                overflow-x: hidden;
+                width: 100%;
+                height: 100%;
+                font-size: 30vw;
+                font-family: 'Khula', sans-serif;
+                letter-spacing: -0.25rem;
+                position: absolute;
+                top: 35%;
+                z-index: 560;
+                line-height: 7rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                span {
+                    position: relative;
+                    z-index: 600;
+                    transition: all 0.75s ease-in;
+                    display: inline-block; // critically must be inline-block
+                    width: 50%;
+                    height: 15%;
+        
+                    svg text {
+                        text-transform: uppercase;
+                        animation: welcome 3s forwards;
+                        animation-iteration-count: 1;
+                        stroke-width: 3;
+                        stroke: #000;
+                        fill: transparent;
+                        
+                    }
+                }
+        
+                #mob_wel {
+                    
+                    width: auto;
+                    margin-left: 6%;
+        
+                    body.page_scrolled &{
+                        margin-left: 85%;
+                    }
+                }
+        
+                #mob_come {
+
+                    width: auto;
+                    margin-left: 6%;
+                    body.page_scrolled &{
+                        margin-left: 65%;
+                    }
+                }
+                 
+        }
+    }
+
+    #mob_greeting_box {
+        @include center;
+    
+        flex-direction: column;
+        position: absolute;
+        top:95vh;
+        left: 20;
+        z-index: 560;
+        bottom: 0;
+        width: 100%;
+        color: $backgroundColor;
+        font-family: Kumbh Sans, sans-serif;
+        font-weight: 700;
+        padding-top: 4rem;
+    
+        article {
+            width: 90%;
+            margin-top: 1rem;
+        }
+    
+        #mob_greeting_title {
+            font-size: 1.5rem;
+            opacity: 0;
+        
+            
+            body.page_scrolled & {
+                animation: 2s text_appears ease-out forwards;
+                animation-iteration-count: 1;
+            }
+            body.page_back_to_top & {
+                animation: 1s text_dissolves ease-out forwards;
+                animation-iteration-count: 1;
+            }
+        }
+        
+        #mob_greeting_content {
+            opacity: 0;
+            color: $tertiaryColor;
+            font-size: 1.25rem;
+    
+            body.page_scrolled & {
+                animation: 2s text_appears ease-out forwards;
+                animation-iteration-count: 1;
+            }
+            body.page_back_to_top & {
+                animation: 1s text_dissolves ease-out forwards;
+                animation-iteration-count: 1;
+            }
+    
+            a{
+                text-decoration: none;
+                color: $backgroundColor;
+                text-shadow: 2px 2px 0 $secondaryColor;
+            }
+        }
+    }
+
+    .mob_content_box {
+        position: relative;
+        height: auto;
+        background-color: white!important;
+        z-index: 600;
+        display: block;
+        overflow-x: hidden;
+        border: none;
+        
+    }
+
+    .mob_recent_project_header, .mob_old_project_header{
+        font-size: 2rem;
+        text-align: center;
+        padding: 4rem 0 0 0;
+        font-family: 'Khula', sans-serif;
+    }
+    .mob_recent_project_header{
+        color: $tertiaryColor;
+    }
+    
+
+    .mob_projects_cont{
+        @include center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4vh 1vh;
+        position: relative;
+        
+    }
+
+    .mob_project_box{
+        @include center;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        height: 80%;
+        margin-bottom: 3rem;
+        background-color: white;
+        -webkit-box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 50px rgba(0,0,0, 0.2);
+        -moz-box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 50px rgba(0,0,0, 0.2);
+        box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 50px rgba(0,0,0, 0.2);
+    
+    }
+    
+    .mob_project_logo_cont{
+        position: relative;
+        width: 100%;
+        padding-top: 45%;
+        position: relative;
+    
+        
+        object{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 100%;
+            max-height: 100%;
+            pointer-events: none;
+            
+        }
+    
+        
+    }
+    
+    #mob_lorem_ipsum_box{
+        background-image: url('img/lorem_background.jpg');
+        background-size: cover;
+    }
+    
+    #mob_red_giraffe_box{
+        background-image: url('img/redgiraffe_background.jpg');
+        background-size: cover;
+    
+    }
+    
+    .mob_project_description{
+        width: 90%;
+        background-color: white;
+        padding-bottom: 1rem;
+        font-family: "Kumbh Sans", sans-serif;
+        line-height: 1.5;
+        font-size: 0.9rem;
+        text-align: justify;
+        text-justify: auto;
+        color: #000000;
+    
+        h1{
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            text-align: center;
+        }
+    
+        a{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.7rem;
+            margin: 1rem auto;
+            background-color: $primaryColor;
+            color: #ffffff;
+            width: 70%;
+    
+            &:hover {
+                background-color: $secondaryColor;
+                color: #ffffff;
+            }
+        }
+    }
+
+
+
+
+    .mob_old_projects{
+        position: relative;
+        height: auto;
+        background-color: white;
+        z-index: 600;
+        overflow-x: hidden!important;
+        border: none;
+    
+    }
+    .mob_old_project_header{
+        color: $secondaryColor;
+        margin-bottom: 2rem;
+    }
+    .mob_carousel_cont{
+        @include center;
+    }
+    #mob_old_project_cont{
+        height: 70%;
+        width: 100%;
+        background-color: white;
+    }
+    
+    .mob_old_project_carusel{
+        @include center;
+        width: 100%;
+        height: 100%;
+        padding: 3% 0%;
+        background-color: white;
+
+    }
+    
+    .mob_old_project_box{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white!important;
+        font-size: 0.9rem;
+        -webkit-box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0, 0.2);
+        -moz-box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0, 0.2);
+        box-shadow: 0px 20px 20px  rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0, 0.2);
+        margin-bottom: 3rem;
+        h1{
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            background-color: white
+        }
+        p{
+            text-align: justify;
+            background-color: white
+        }
+    
+        .mob_btn_box{
+            display: flex;
+            justify-content: center;
+        }
+    
+        a{
+            display: block;
+            background-color: $secondaryColor;
+            color: #ffffff;
+            padding: 1rem;
+            width: max-content;
+    
+            &:hover{
+                background-color: $tertiaryColor;
+                color: #ffffff;
+            }
+        }
+    }
+    .mob_old_project_img{
+        width: 100%;
+        position: relative;
+    
+        img{
+            max-width: 100%;
+            pointer-events: all;
+        }
+    
+    }
+    
+    .mob_old_project_description{
+        width: 95%;
+        padding: 2rem;
+    }
+    
+ 
+    
+    
+    .mob_carousel-indicators {
+         bottom: 0!important;
+        li{
+        width: 10px!important;
+        height: 10px!important;
+        border-radius: 50px;
+        }
+    }
+
+
+
+
+
+
+
+
+    
+    #mob_cv_menu{
+        position: fixed;
+        top: 3.4rem;
+        width: 100%;
+        height: 0;
+        z-index: 900;
+        background-color: #ffffff;
+        transition: all 1s ease-in-out;
+
+            header{
+                position: relative;
+                padding: 0 0.2rem;
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                background-color: black;
+                color: white;
+                min-height: 8vh;
+                opacity: 0;
+                pointer-events: none;
+                z-index: 1050;
+
+                div{
+                    @include center;
+                    font-weight: bold;
+                    padding: 2VW;
+                }
+            }
+        
+        #mob_cv_cat_box{
+            width: 100%;
+            height: 100%;
+        }
+
+    #mob_dig_comp_box{
+    
+        height: 100%;
+        width: 100%;
+        display: flex;
+        font-size: 6vw;
+        
+        table{
+            width: max-content;
+            height: 80%;
+            padding: 2rem;
+            margin-right: 0;
+            margin-left: auto;
+
+            tr{
+                td{
+                    padding-left: 1vw;
+                    &:first-child{
+                        text-align: right;
+                    }  
+                }   
+            }
+        }
+    }
+
+
+    #mob_edu_box, #mob_work_ex_box{
+        @include center;
+        width: 100%;
+        height: 85vh;
+        position: absolute;
+        top: 8vh;
+        left: 0;
+    }
+    .mob_scrollable_cont{
+        background-color: white;
+        position: absolute;
+        height: 85vh;
+        width: 100%;
+        overflow-y: auto!important;
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .mob_edu_section, .mob_work_section{
+            border-bottom: 1px solid black;
+            padding: 1rem 0;
+
+            h1{
+                font-size: 1.5rem;
+            }
+    }
+    .mob_work_title, .mob_edu_title{
+            font-size: 1.3rem;
+            font-weight: bold;
+    }
+
+    #mob_edu_box, #mob_work_ex_box, #mob_dig_comp_box{
+            opacity: 0;
+            pointer-events: none;
+    }
+
+
+    &.open{
+        header{
+            animation: 2s mob_text_appears ease-out forwards;
+            animation-iteration-count: 1;
+            pointer-events: all;
+        }
+        #mob_edu_box, #mob_work_ex_box, #mob_dig_comp_box{
+            &.closed{
+                opacity: 0;
+                pointer-events: none;
+            }
+            &.activated{
+                animation: 3s mob_text_appears ease-out forwards;
+                animation-iteration-count: 1;
+                pointer-events: all;
+            }
+
+            &.deactivated{
+                animation: 3s text_dissolves ease-out forwards;
+                animation-iteration-count: 1;
+                pointer-events: none;
+            }
+         }
+        }
+        &.closed{
+            header{
+                animation: 2s text_dissolves ease-out forwards;
+                animation-iteration-count: 1;
+                pointer-events: none;
+            }
+            #mob_edu_box, #mob_work_ex_box, #mob_dig_comp_box{
+                pointer-events: none;
+                &.activated{
+                    animation: 2s mob_text_dissolves ease-out forwards;
+                    animation-iteration-count: 1;
+                } 
+            }
+        }
+    }
+
+    #mob_dig_comp_btn.activated{
+        color: $secondaryColor;
+    }
+    #mob_edu_btn.activated{
+        color: $tertiaryColor;
+    }
+    #mob_work_ex_btn.activated{
+        color: $primaryColor;
+    }
+
+           
+    }
+
+  
+

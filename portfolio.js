@@ -156,9 +156,160 @@ function close_zoom_img(close_zoom_btn){
   target_img.classList.add("closed");
 }
 
-  
+
+//---------------------------MOBILE VERSION-----------------------------------
+
+
+let mob_cat_btn = document.querySelectorAll('.mob_cat_btn');
+
+
+for (let index = 0; index < mob_cat_btn.length; index++) {
 
   
+  
+  mob_cat_btn[index].addEventListener('touchstart', function(){
 
+    
+    let target_cat_box = document.getElementById(this.getAttribute('data-target'));
+
+    if(target_cat_box.classList.contains("activated")){
+      return
+    }
+
+    if(target_cat_box.classList.length == 0){
+      
+      for (let index = 0; index < mob_cat_btn.length; index++) {
+
+        mob_cat_btn[index].classList.remove("activated");
+
+        let target = document.getElementById( mob_cat_btn[index].getAttribute("data-target"));
+
+        if(target.classList.contains("activated")){
+          
+          target.classList.remove("activated");
+          target.classList.add("deactivated");
+
+          setTimeout(() => {
+            target.classList.remove("deactivated");
+          }, 1500);
+        }
+      }
+      
+      target_cat_box.classList.add("activated");
+      
+    }
+
+    this.classList.add("activated");
+  })
+  
+}
+
+
+
+
+let cv_menu_btn = document.getElementById("mob_cv_svg");
+let mob_cv_menu = document.getElementById("mob_cv_menu");
+
+  cv_menu_btn.addEventListener("touchstart", function () {
+
+    cv_menu_btn.setAttribute('pointer-events' , 'none');
+
+    setTimeout(() => {
+      cv_menu_btn.setAttribute('pointer-events' , 'initial');
+    }, 1500);
+
+    
+    if( mob_cv_menu.classList.contains("closed") || mob_cv_menu.classList.length == 0){
+      prevent_page_scroll();
+    }
+    else{
+      enable_page_scroll();
+    }
+    
+    if(mob_cv_menu.classList.contains("open") || mob_cv_menu.classList.contains("closed")){
+      mob_cv_menu.classList.toggle("open");
+      mob_cv_menu.classList.toggle("closed");
+    }
+    else{
+      mob_cv_menu.classList.add("open");
+    }
+
+    
+    if (anime_c.completed) {
+      anime_cv_menu.reverse();
+      anime_c.reverse();
+      anime_v.reverse();
+      anime_cv_menu.play();
+      anime_c.play();
+      anime_v.play();
+      
+    }
+    else{
+      anime_cv_menu.play();
+      anime_c.play();
+      anime_v.play();
+      
+    }
+    
+    
+  });
+  
+
+  var anime_cv_menu= anime({
+    targets: '#mob_cv_menu',
+    height: '95vh',
+    duration: 100,
+    autoplay: false,
+    easing: 'linear',
+    loop:1,
+    delay: 0
+  
+  });
+
+var c_shapes = [
+  {
+      d: "M60 10 L25 10 L10,25 L10 75 L25 90 L60 90"
+  },
+  {
+      d: "M15 0 L75 50 L75 50  L75 50 L135 100 L135 100"
+  }
+]
+
+ var anime_c = anime({
+  targets: '#c',
+  d: [
+      {value: c_shapes[0].d},
+      {value: c_shapes[1].d}
+  ],
+  duration: 1000,
+  direction: 'normal',
+  autoplay: false,
+  easing: 'linear',
+  loop: 1
+
+});
+
+var v_shapes = [
+  {
+      d: "M105 60 L140 136 L175 60"
+  },
+  {
+      d: "M45 150 L105 100 L165 50" 
+  }
+]
+
+var anime_v = anime({
+  targets: '#v',
+  d: [
+      {value: v_shapes[0].d},
+      {value: v_shapes[1].d}
+  ],
+  duration: 1000,
+  direction: 'normal',
+  autoplay: false,
+  easing: 'linear',
+  loop: 1
+
+});
 
 
