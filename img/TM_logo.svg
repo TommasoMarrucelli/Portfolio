@@ -6,7 +6,7 @@
 
 
   
-    <circle cx="100" cy="100" r="95" stroke="black" stroke-width="8" fill="transparent"/>
+    <circle cx="100" cy="100" r="95" stroke="black" stroke-width="8" fill="white"/>
 
     <g transform="scale(1.25) translate(-20, -20)">
         <line x1="50" y1="75" x2="150" y2="75" style="stroke:black;stroke-width:8" />

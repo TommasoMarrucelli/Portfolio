@@ -1678,9 +1678,9 @@ body.page_scrolled #hello_msg_box .hello_msg #x_deco {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: fixed;
+    padding-left: 0.5rem;
     height: 2rem;
-    margin: 3%;
+    margin: 0%;
     z-index: 1000;
   }
   #logo_cont span {
@@ -1703,17 +1703,19 @@ body.page_scrolled #hello_msg_box .hello_msg #x_deco {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 3.5rem;
     background-color: white;
     z-index: 990;
     overflow: hidden;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   #mob_header .mob_link {
-    padding: 0 1rem;
+    padding: 0 rem;
   }
   #mob_header .mob_link i {
     color: black;
@@ -1725,7 +1727,7 @@ body.page_scrolled #hello_msg_box .hello_msg #x_deco {
     color: white;
   }
   #mob_header #mob_cv_btn_box {
-    position: absolute;
+    position: relative;
     right: 0.5rem;
     background-color: transparent;
     pointer-events: all;
@@ -2177,19 +2179,22 @@ body.page_scrolled #hello_msg_box .hello_msg #x_deco {
     display: flex;
     font-size: 6vw;
   }
-  #mob_cv_menu #mob_dig_comp_box table {
+  #mob_cv_menu #mob_dig_comp_box #big_tab {
+    width: 100%;
+    height: 75%;
+  }
+  #mob_cv_menu #mob_dig_comp_box #big_tab table {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    height: 80%;
-    padding: 2rem;
+    height: 100%;
     margin-right: 0;
     margin-left: auto;
   }
-  #mob_cv_menu #mob_dig_comp_box table tr td {
+  #mob_cv_menu #mob_dig_comp_box #big_tab table tr td {
     padding-left: 1vw;
   }
-  #mob_cv_menu #mob_dig_comp_box table tr td:first-child {
+  #mob_cv_menu #mob_dig_comp_box #big_tab table tr td:first-child {
     text-align: right;
   }
   #mob_cv_menu #mob_edu_box, #mob_cv_menu #mob_work_ex_box {
@@ -2203,15 +2208,15 @@ body.page_scrolled #hello_msg_box .hello_msg #x_deco {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    height: 85vh;
+    height: 80vh;
     position: absolute;
-    top: 8vh;
+    top: 5vh;
     left: 0;
   }
   #mob_cv_menu .mob_scrollable_cont {
     background-color: white;
     position: absolute;
-    height: 85vh;
+    height: 70vh;
     width: 100%;
     overflow-y: auto !important;
     padding: 1rem 1rem 2rem 1rem;

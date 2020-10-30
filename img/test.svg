@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0,0,100,100" width="240" height="240">
+    
+    
+    
+
+
+  
+    <circle cx="120" cy="120" r="95" stroke="black" stroke-width="8" fill="transparent"/>
+
+    <path id="lil_circ_path" d="
+        M 120, 120
+        m -95, 0
+        a 95,95 0 1,0 190,0
+        a 95,95 0 1,0 -190,0
+    "/>
+
+    <circle id="lil_circ" r="15" fill="red"/>
+
+ <animateMotion xlink:href="#lil_circ" dur="1s" fill="freeze">
+        <mpath xlink:href="#lil_circ_path" />
+    </animateMotion>
+
+    
+</svg>

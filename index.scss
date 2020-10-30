@@ -1093,10 +1093,12 @@ body{
 
     #logo_cont{
         @include center;
-        position: fixed;
+        
+        padding-left: 0.5rem;
         height: 2rem;
-        margin: 3%;
+        margin:0%;
         z-index: 1000;
+        
 
         span{
             font-size: 1rem;
@@ -1115,16 +1117,17 @@ body{
     #mob_header{
         @include center;
         
-        position: sticky;
+        position: fixed;
         top: 0;
         width: 100%;
         height: 3.5rem;
         background-color: $frameColor;
         z-index: 990;
         overflow: hidden;
+        justify-content: space-between;
 
         .mob_link{
-            padding: 0 1rem;
+            padding: 0 rem;
             i{
                 color: black; 
             }
@@ -1138,7 +1141,7 @@ body{
         }
 
         #mob_cv_btn_box{
-           position: absolute;
+           position: relative;
            right: 0.5rem;
            background-color: transparent;
            pointer-events: all;
@@ -1564,38 +1567,45 @@ body{
         width: 100%;
         display: flex;
         font-size: 6vw;
-        
-        table{
-            width: max-content;
-            height: 80%;
-            padding: 2rem;
-            margin-right: 0;
-            margin-left: auto;
 
-            tr{
-                td{
-                    padding-left: 1vw;
-                    &:first-child{
-                        text-align: right;
-                    }  
-                }   
+        #big_tab{
+            width: 100%;
+            height: 75%;
+
+            table{
+                width: max-content;
+                height: 100%;
+                
+                margin-right: 0;
+                margin-left: auto;
+    
+                tr{
+                    td{
+                        padding-left: 1vw;
+                        &:first-child{
+                            text-align: right;
+                        }  
+                    }   
+                }
             }
         }
+        
+        
     }
 
 
     #mob_edu_box, #mob_work_ex_box{
         @include center;
         width: 100%;
-        height: 85vh;
+        height: 80vh;
         position: absolute;
-        top: 8vh;
+        top: 5vh;
         left: 0;
     }
     .mob_scrollable_cont{
         background-color: white;
         position: absolute;
-        height: 85vh;
+        height: 70vh;
         width: 100%;
         overflow-y: auto!important;
         padding: 1rem 1rem 2rem 1rem;
