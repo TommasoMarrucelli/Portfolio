@@ -1444,6 +1444,11 @@ body.page_scrolled #hello_msg_box .hello_msg #x_deco {
   background-size: cover;
 }
 
+#morozzi_box {
+  background-image: url("img/class.png");
+  background-size: cover;
+}
+
 .project_description {
   width: 90%;
   background-color: #f8f8f8;
@@ -1979,6 +1984,10 @@ body.page_scrolled #hello_msg_box .hello_msg #x_deco {
   }
   #mob_red_giraffe_box {
     background-image: url("img/redgiraffe_background.jpg");
+    background-size: cover;
+  }
+  #mob_morozzi_box {
+    background-image: url("img/class.png");
     background-size: cover;
   }
   .mob_project_description {
